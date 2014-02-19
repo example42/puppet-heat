@@ -5,12 +5,12 @@
 class heat::params {
 
   $package_name = $::osfamily ? {
-    'RedHat' => 'openstack-heat',
-    default  => 'heat',
+    'RedHat' => 'openstack-heat-common',
+    default  => 'heat-common',
   }
 
   $service_name = $::osfamily ? {
-     default  => '',
+    default => '',
   }
 
   $config_file_path = $::osfamily ? {
